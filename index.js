@@ -1,27 +1,12 @@
 
 let i =0;
-
-
 function weather() {
- 
-
-    
-
-
-if(i<4){
+ if(i<4){
    let Cities = document.getElementsByClassName("sub")
-   
-   console.log(Cities[0]);
+    console.log(Cities[0]);
+ let city = `${Cities[i].innerHTML}`
 
-   
-   
-   
-   let city = `${Cities[i].innerHTML}`
-
-
-   
-   
-   fetch(`https://python3-dot-parul-arena-2.appspot.com/test?cityname=${city}`)
+ fetch(`https://python3-dot-parul-arena-2.appspot.com/test?cityname=${city}`)
    .then(res => {
       return res.json();  
    })
